@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Tarea(models.Model):
-    usuario = models.ForeignKey(User, 
+    usuario = models.ForeignKey(User,
                                 on_delete=models.CASCADE,
                                 null=True,
                                 blank=True)
@@ -15,7 +15,6 @@ class Tarea(models.Model):
 
     def __str__(self):
         return self.titulo
-        
+
     class Meta:
         ordering = ['completo']
-        
